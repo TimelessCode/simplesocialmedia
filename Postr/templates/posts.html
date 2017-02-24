@@ -1,0 +1,18 @@
+{% extends "landing.html" %}
+
+{% block body %}
+
+<p>
+  <pre>
+Post Something!
+
+
+  </pre>
+</p>
+
+<form action="/posts" method="POST">
+  <textarea rows="4" cols="50" name="content">
+       <input type="submit" name="my-form" value="post">
+   </form>
+
+{% endblock %}
