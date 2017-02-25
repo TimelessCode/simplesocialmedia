@@ -5,7 +5,7 @@ from flask import request,redirect
 from flask import make_response, url_for
 
 
-app = Flask(__name__, template_folder='../Postr/templates')
+app = Flask(__name__, template_folder='Postr/templates')
 app.secret_key=b'tk9\xab\xe5\xfb\xcc\xd6k'
 
 
