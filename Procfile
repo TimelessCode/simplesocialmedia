@@ -1,2 +1,2 @@
 heroku ps:scale web=1
-web: gunicorn Postr.postr:app
+web: gunicorn postr:app
