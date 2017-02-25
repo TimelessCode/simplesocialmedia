@@ -5,18 +5,18 @@ from flask import request,redirect
 from flask import make_response, url_for
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../Postr/templates')
 app.secret_key=b'tk9\xab\xe5\xfb\xcc\xd6k'
 
 
 @app.route('/')
 def hello_world():
     session['username'] = " Guest"
-    return render_template("Postr/home.html")
+    return render_template("home.html")
 
 @app.route("/posts")
 def posts():
-    return render_template("Postr/posts.html")
+    return render_template("posts.html")
 
 @app.route("/posts", methods=['POST'])
 def postsg():
@@ -27,11 +27,11 @@ def postsg():
 
 @app.route("/home")
 def home():
-    return render_template("Postr/home.html")
+    return render_template("home.html")
 
 @app.route("/profile")
 def profile():
-    return render_template("Postr/profile.html",user = session['username'])
+    return render_template("profile.html",user = session['username'])
 
 
 @app.route("/profile", methods=['POST'])
