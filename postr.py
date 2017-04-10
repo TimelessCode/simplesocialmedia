@@ -6,7 +6,7 @@ from flask import make_response, url_for
 
 
 app = Flask(__name__, template_folder='Postr/templates',static_folder='Postr/static')
-app.secret_key=b'tk9\xab\xe5\xfb\xcc\xd6k'
+app.secret_key='dont try it change me, timelesscode will git you'
 
 
 @app.route('/')
